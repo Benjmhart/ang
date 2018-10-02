@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-header [activeComponent]="activeComponent" (navEvent)="handleNavEvent($event)" ></app-header>
+      <app-recipes *ngIf="activeComponent === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="activeComponent === 'shopping-list'"></app-shopping-list>
+    </div>
+  </div>
+</div>
